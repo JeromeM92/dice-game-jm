@@ -7,9 +7,19 @@ body {
     display: grid;
     grid-template-rows: 80px 150px 1fr ;
 }
+#rules{
+    margin-left: 10px;
+    border: none;
+    background: none;
+    text-decoration: underline;
+}
+#regles{
+    display: none;
+}
 h1{
     grid-column: 1 / -1;
     text-align: center;
+    cursor: pointer;
 }
 #notice{
     font-style: italic;

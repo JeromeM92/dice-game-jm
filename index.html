@@ -14,15 +14,25 @@
 
 <body>  
     <!-- Bouton Nouvelle partie -->  
-    <div>
+    <div id="header">
         <h1>
             <button id="new-game" style="font-size: 1.75rem; background: none; border: none;">
                 <i class="bi bi-arrow-counterclockwise"></i>
             </button>
-            Nouvelle Partie
+            Nouvelle Partie<button id="rules">Voici les règles ! </button> 
         </h1>
-        <p id="notice">(La notice des règles arrivent très vite !)</p>
+            <br>
+                <p id="regles">Le premier joueur qui arrive à  un score global de 100 gagne la partie. <br>
+                C'est le joueur 1  qui commence, en cliquant sur le bouton "Lancer le dé", il augmente son score de round<br>
+                Des qu'il clique sur le bouton "Sauvegarder", il enregistre son score de round dans son score global, <br>
+                 mais son tour s'arrête et c'est à l'autre joueur de jouer.
+                Si un joueur fait "1", c'est au tour de l'autre joueur. <br>
+                Une fois qu'un joueur a atteint le score de 100, la partie s'arrête et vous pouvez cliquer sur "nouvelle partie" pour recommencer ! 
+                Bon jeu à vous ! 
+            </p>
+           
     </div>
+    
         
     <div id="container-players">
         <!-- Joueur 1 -->

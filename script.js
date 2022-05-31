@@ -11,7 +11,7 @@ let P1 = true
 let P2 = false
 
 /* Condition de victoire */
-const scoreToWin = 50
+const scoreToWin = 100
 
 /* Récuparation des élements */
 const newgame = document.getElementById('new-game')
@@ -34,6 +34,11 @@ const dice6 = document.getElementById('dice6')
 
 const rollingDice = document.getElementById('btn__rollDice')
 const saveCurrentToGlobal = document.getElementById('saveScore')
+const btnRules = document.getElementById('rules')
+const textRules = document.getElementById('regles')
+
+
+
 
 /* Nouvelle partie */
 
@@ -125,13 +130,23 @@ switch (numberRand) {
     }
 }
 
+btnRules.addEventListener("mouseenter", displayRules);
+btnRules.addEventListener("mouseout", noDisplayRules);
+
+function displayRules () {
+    textRules.style.display = "block";
+};
+function noDisplayRules () {
+    textRules.style.display = "none";
+};
+
 /* Déterminer un nombre aléatoire & lancement du dé */
 rollingDice.addEventListener("click", rollDice)
 
 function rollDice () {
     diceValue = Math.floor((Math.random(0,1) * 6) + 1);
     displayDice(diceValue);
-
+    textRules.style.display = "block";
     if (diceValue == 1) {
         if(P1){
         P1 = false
@@ -161,6 +176,7 @@ function rollDice () {
         scoreCurrentP2.textContent = roundScore;
     }
 }
+
 
 /* Sauvegarder le score du round */
 saveCurrentToGlobal.addEventListener("click", saveScore)
@@ -202,5 +218,7 @@ function saveScore(){
             scoreCurrentP2.textContent = 0
         }}
 }
+
+/*Affichage des règles */
 
 
