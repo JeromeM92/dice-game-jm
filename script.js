@@ -146,7 +146,6 @@ rollingDice.addEventListener("click", rollDice)
 function rollDice () {
     diceValue = Math.floor((Math.random(0,1) * 6) + 1);
     displayDice(diceValue);
-    textRules.style.display = "block";
     if (diceValue == 1) {
         if(P1){
         P1 = false
